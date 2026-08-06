@@ -124,6 +124,10 @@ img {
 }
 
 .nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   gap: 28px;
@@ -1028,7 +1032,8 @@ img {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 24px;
-    padding: 84px 32px;
+    padding: 84px 32px calc(48px + env(safe-area-inset-bottom));
+    overflow-y: auto;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     font-size: 1.05rem;
