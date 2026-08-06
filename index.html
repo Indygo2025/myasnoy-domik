@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мясной домик — свежее мясо и полуфабрикаты</title>
+  <meta name="description" content="Колбасы, полуфабрикаты, копчености, фарш и тушенка. ИП Лаврухин М.Ю., г. Рославль. Актуальный прайс на сайте.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">🥩</span>
+        <span class="logo__text">Мясной <strong>домик</strong></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="price.html" class="nav__link">Прайс</a>
+        <a href="about.html" class="nav__link">О нас</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+        <a href="tel:+79991234567" class="nav__link nav__link--phone">+7 (999) 123-45-67</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Своя продукция <span>по ценам производителя</span></h1>
+          <p class="hero__subtitle">Колбасы, полуфабрикаты, копчености, фарш и тушенка собственного производства. Весь ассортимент и актуальные цены — в прайсе на сайте.</p>
+          <div class="hero__actions">
+            <a href="catalog.html" class="btn btn--primary">Смотреть каталог</a>
+            <a href="price.html" class="btn btn--ghost">Смотреть прайс</a>
+          </div>
+          <ul class="hero__points">
+            <li>🌭 Более 50 позиций: колбасы, котлеты, пельмени, голубцы</li>
+            <li>💰 Мелкий опт и розница по ценам производителя</li>
+            <li>🧾 Работаем официально: ИП Лаврухин М.Ю., ИНН 672500023868</li>
+          </ul>
+        </div>
+        <div class="hero__visual">
+          <img class="hero__img" src="img/hero.svg" alt="Своя продукция «Мясной домик»">
+          <div class="hero__float">
+            <span class="hero__float-label">Хит продаж</span>
+            <strong>Колбаса чесночная</strong>
+            <span>410 ₽/кг</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container features__grid">
+        <div class="feature reveal">
+          <span class="feature__icon">🌭</span>
+          <h3>Собственное производство</h3>
+          <p>Колбасы, полуфабрикаты и копчености делаем сами по домашним рецептам.</p>
+        </div>
+        <div class="feature reveal">
+          <span class="feature__icon">💰</span>
+          <h3>Цены производителя</h3>
+          <p>Продаем без посредников — выгодно в розницу и мелким оптом.</p>
+        </div>
+        <div class="feature reveal">
+          <span class="feature__icon">📋</span>
+          <h3>Актуальный прайс</h3>
+          <p>Все цены на сайте. Прайс можно скачать и распечатать.</p>
+        </div>
+        <div class="feature reveal">
+          <span class="feature__icon">🧾</span>
+          <h3>Работаем официально</h3>
+          <p>ИП Лаврухин М.Ю., ИНН 672500023868. Документы для юр. лиц.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="hits">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Хиты продаж</h2>
+          <p class="section-sub">Самые популярные товары наших покупателей.</p>
+        </div>
+        <div class="catalog__grid" id="featured"></div>
+        <div class="section-actions reveal">
+          <a href="catalog.html" class="btn btn--ghost">Смотреть весь каталог</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about__inner">
+        <div class="about__emoji reveal">🏬</div>
+        <div class="reveal">
+          <h2 class="section-title">О нас</h2>
+          <p>«Мясной домик» — собственное производство колбас, полуфабрикатов и копченостей в городе Рославль. Мы сами делаем продукцию из свежего сырья и ручаемся за качество каждой партии.</p>
+          <p>Вся продукция проходит контроль качества и изготавливается по домашним рецептам. В каталоге — колбасы, котлеты, пельмени, голубцы, фарш, копчености и тушенка.</p>
+          <a href="about.html" class="btn btn--primary">Подробнее о нас</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-banner">
+      <div class="container order-banner__inner">
+        <div>
+          <h2>Оформите заказ прямо сейчас</h2>
+          <p>Позвоните нам или напишите в Telegram — менеджер поможет выбрать нарезку и рассчитает стоимость доставки.</p>
+        </div>
+        <div class="order-banner__actions">
+          <a href="tel:+79991234567" class="btn btn--primary btn--lg">📞 +7 (999) 123-45-67</a>
+          <a href="https://t.me/meat_dvor" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">✈ Telegram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__icon">🥩</span>
+        <span class="logo__text">Мясной <strong>домик</strong></span>
+        <p>Колбасы, полуфабрикаты и копчености собственного производства.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="price.html">Прайс</a>
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer__contacts">
+        <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+        <a href="mailto:info@meatdvor.ru">info@meatdvor.ru</a>
+        <span>г. Рославль, ул. Карла Маркса 35</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        © 2026 «Мясной домик». ИП Лаврухин М.Ю., ИНН 672500023868. Цены на сайте не являются публичной офертой.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

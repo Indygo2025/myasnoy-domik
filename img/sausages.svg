@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-label="Колбасы и деликатесы">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff6ea"/>
+      <stop offset="1" stop-color="#ffdcd6"/>
+    </linearGradient>
+    <linearGradient id="saus" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c96f43"/>
+      <stop offset="1" stop-color="#963f1e"/>
+    </linearGradient>
+    <linearGradient id="saus2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0a87c"/>
+      <stop offset="1" stop-color="#b06a3a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffcfa6" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffcfa6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="420" height="320" rx="26" fill="url(#bg)"/>
+  <circle cx="380" cy="40" r="110" fill="url(#glow)"/>
+  <circle cx="40" cy="290" r="120" fill="url(#glow)"/>
+
+  <ellipse cx="205" cy="252" rx="152" ry="42" fill="#f4ece2" stroke="#e8dfd4" stroke-width="2"/>
+  <ellipse cx="205" cy="254" rx="122" ry="30" fill="#efe3d3"/>
+
+  <g>
+    <g transform="rotate(-14 150 210)">
+      <rect x="110" y="178" width="96" height="34" rx="17" fill="url(#saus)"/>
+      <rect x="108" y="190" width="7" height="12" rx="3.5" fill="#82371a"/>
+      <rect x="202" y="190" width="7" height="12" rx="3.5" fill="#82371a"/>
+      <g stroke="#ffd9b0" stroke-width="4" stroke-linecap="round" opacity="0.5">
+        <line x1="128" y1="190" x2="134" y2="202"/>
+        <line x1="146" y1="188" x2="152" y2="204"/>
+        <line x1="164" y1="190" x2="170" y2="202"/>
+      </g>
+    </g>
+    <g transform="rotate(8 260 205)">
+      <rect x="212" y="182" width="112" height="38" rx="19" fill="url(#saus2)"/>
+      <rect x="210" y="196" width="7" height="12" rx="3.5" fill="#8a5a33"/>
+      <rect x="320" y="196" width="7" height="12" rx="3.5" fill="#8a5a33"/>
+      <g stroke="#7c522f" stroke-width="4" stroke-linecap="round" opacity="0.35">
+        <line x1="236" y1="196" x2="242" y2="208"/>
+        <line x1="256" y1="194" x2="262" y2="210"/>
+        <line x1="276" y1="196" x2="282" y2="208"/>
+      </g>
+    </g>
+    <circle cx="118" cy="242" r="26" fill="url(#saus)"/>
+    <path d="M110 250 l16 -10 18 10 -18 14 z" fill="#e8e2d4" stroke="#c9bfae" stroke-width="2"/>
+  </g>
+
+  <g>
+    <g fill="#4c8a3d">
+      <ellipse cx="330" cy="276" rx="18" ry="8" transform="rotate(-18 330 276)"/>
+      <ellipse cx="358" cy="270" rx="18" ry="8" transform="rotate(-4 358 270)"/>
+    </g>
+    <path d="M334 290 q-10 4 -14 -4" stroke="#3f7a3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

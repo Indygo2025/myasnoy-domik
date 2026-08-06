@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="Свежее мясо">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff6ea"/>
+      <stop offset="1" stop-color="#ffdcd6"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c08a5e"/>
+      <stop offset="1" stop-color="#8a5a33"/>
+    </linearGradient>
+    <linearGradient id="meat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c96f43"/>
+      <stop offset="1" stop-color="#9c4522"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffcfa6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffcfa6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="520" rx="32" fill="url(#bg)"/>
+  <circle cx="560" cy="80" r="160" fill="url(#glow)"/>
+  <circle cx="70" cy="470" r="200" fill="url(#glow)"/>
+  <circle cx="600" cy="460" r="40" fill="#e2685a" opacity="0.18"/>
+
+  <g transform="rotate(-8 320 390)">
+    <rect x="140" y="330" width="360" height="140" rx="30" fill="url(#wood)"/>
+    <ellipse cx="320" cy="372" rx="168" ry="42" fill="#9c6a41" opacity="0.5"/>
+    <path d="M160 385 h120 M300 388 h110 M430 385 h50" stroke="#7c522f" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <ellipse cx="320" cy="290" rx="165" ry="102" fill="url(#meat)"/>
+  <ellipse cx="320" cy="345" rx="140" ry="62" fill="#82371a" opacity="0.85"/>
+  <ellipse cx="320" cy="300" rx="130" ry="70" fill="#b95f35" opacity="0.5"/>
+
+  <g stroke="#6e2710" stroke-width="7" stroke-linecap="round" opacity="0.5">
+    <line x1="235" y1="240" x2="205" y2="332"/>
+    <line x1="288" y1="224" x2="256" y2="338"/>
+    <line x1="346" y1="228" x2="312" y2="340"/>
+    <line x1="400" y1="248" x2="372" y2="332"/>
+  </g>
+
+  <ellipse cx="272" cy="248" rx="62" ry="26" fill="#ffd9b0" opacity="0.4"/>
+
+  <g>
+    <path d="M150 296 q-16 4 -20 -6" stroke="#3f7a3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="150" cy="280" rx="24" ry="10" transform="rotate(-24 150 280)" fill="#4c8a3d"/>
+    <ellipse cx="182" cy="270" rx="24" ry="10" transform="rotate(-8 182 270)" fill="#4c8a3d"/>
+    <ellipse cx="214" cy="272" rx="24" ry="10" transform="rotate(12 214 272)" fill="#5a9740"/>
+    <path d="M170 298 q-4 22 4 40" stroke="#3f7a3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <circle cx="468" cy="320" r="24" fill="#d93a2f"/>
+  <path d="M468 296 q8 -10 20 -8 q-6 12 -20 10 q-14 -2 -20 -10 q12 -2 20 8" fill="#2f6d2f"/>
+  <circle cx="436" cy="356" r="17" fill="#e2685a" opacity="0.9"/>
+  <circle cx="492" cy="368" r="14" fill="#e2685a" opacity="0.8"/>
+  <circle cx="500" cy="340" r="10" fill="#e2685a" opacity="0.7"/>
+
+  <g stroke="#ffffff" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M238 176 q22 -30 0 -58 q-20 -26 0 -52"/>
+    <path d="M340 166 q20 -30 0 -56 q-18 -26 2 -50"/>
+    <path d="M428 182 q20 -28 2 -54 q-18 -28 0 -52"/>
+  </g>
+</svg>
