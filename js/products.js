@@ -81,11 +81,17 @@ const PRODUCTS = [
 
 function productImage(p) {
   const n = p.name.toLowerCase();
-  if (n.includes('куриц') || n.includes('индейк')) return 'poultry';
-  if (p.group === 'sausages') return 'sausages';
-  if (p.group === 'kopchenosti') return 'sausages';
-  if (p.group === 'tushenka') return 'sausages';
-  if (p.group === 'salo') return 'sausages';
-  if (p.group === 'subproduct' || p.group === 'svinina') return 'pork';
-  return 'semi';
+  if (n.includes('перец')) return 'pepper.jpg';
+  if (n.includes('голуб')) return 'golubcy.jpg';
+  if (n.includes('фарш котлетный')) return 'farsh.jpg';
+  if (n.includes('фарш свиной')) return 'farsh-svinoy.jpg';
+  if (n.includes('пельмени')) return 'pelmeni.jpg';
+  if (n.includes('котлет')) return 'cutlets.jpg';
+  if (n.includes('куриц') || n.includes('индейк')) return 'poultry.svg';
+  if (p.group === 'sausages') return 'sausages.svg';
+  if (p.group === 'kopchenosti') return 'sausages.svg';
+  if (p.group === 'tushenka') return 'sausages.svg';
+  if (p.group === 'salo') return 'sausages.svg';
+  if (p.group === 'subproduct' || p.group === 'svinina') return 'pork.svg';
+  return 'semi.svg';
 }

@@ -14,7 +14,7 @@ function productCard(p, idx) {
     <article class="card reveal" style="transition-delay:${(idx % 4) * 70}ms">
       ${badge}
       <div class="card__image">
-        <img src="img/${productImage(p)}.svg" alt="${GROUPS[p.group]}" loading="lazy">
+        <img src="img/${productImage(p)}" alt="${GROUPS[p.group]}" loading="lazy">
       </div>
       <div class="card__cat">${GROUPS[p.group]}${p.sub ? ' · ' + p.sub : ''}</div>
       <div class="card__name">${p.name}</div>
@@ -117,7 +117,7 @@ if (priceTableWrap) {
             <td>
               <span class="td-hover">
                 <span class="td-hover__name">${p.name}${p.price == null ? `<small class="td-cat">Цена по запросу</small>` : ''}</span>
-                <img class="td-hover__img" src="img/${productImage(p)}.svg" alt="${GROUPS[p.group]}" loading="lazy">
+                <img class="td-hover__img" src="img/${productImage(p)}" alt="${GROUPS[p.group]}" loading="lazy">
               </span>
             </td>
             <td class="td-num ${p.price == null ? 'td-num--na' : ''}">${p.price == null ? 'по запросу' : formatPrice(p.price) + ' / ' + p.unit}</td>
