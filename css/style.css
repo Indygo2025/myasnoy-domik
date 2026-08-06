@@ -98,6 +98,10 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
+.site-head {
+  position: relative;
+}
+
 .header__inner {
   display: flex;
   align-items: center;
