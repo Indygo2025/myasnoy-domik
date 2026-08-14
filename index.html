@@ -3,114 +3,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мясной домик — свежее мясо и полуфабрикаты</title>
-  <meta name="description" content="Колбасы, полуфабрикаты, копчености, фарш и тушенка. ИП Лаврухин М.Ю., г. Рославль. Актуальный прайс на сайте.">
+  <title>Мясной домик — свежее мясо, колбасы и полуфабрикаты в Рославле | Своё производство</title>
+  <meta name="description" content="Свежее мясо, колбасы, копчености, фарш и тушенка собственного производства в Рославле. Более 50 позиций, цены производителя, доставка и самовывоз. ИП Лаврухин М.Ю.">
+  <meta name="robots" content="index, follow">
+  <meta name="yandex" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="geo.region" content="RU-SMO">
+  <meta name="geo.placename" content="Рославль">
+  <link rel="canonical" href="https://myasnoy-domik.ru/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Мясной домик — свежее мясо и полуфабрикаты в Рославле">
+  <meta property="og:description" content="Колбасы, полуфабрикаты, копчености, фарш и тушенка собственного производства. Цены производителя, доставка и самовывоз в Рославле.">
+  <meta property="og:image" content="https://myasnoy-domik.ru/img/Logo.jpg">
+  <meta property="og:url" content="https://myasnoy-domik.ru/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Мясной домик",
+    "description": "Собственное производство колбас, полуфабрикатов, копченостей, фарша и тушенки. Розница и мелкий опт по ценам производителя.",
+    "image": "https://myasnoy-domik.ru/img/Logo.jpg",
+    "url": "https://myasnoy-domik.ru/",
+    "telephone": "+7 (999) 123-45-67",
+    "email": "info@meatdvor.ru",
+    "priceRange": "₽₽",
+    "taxID": "672500023868",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Карла Маркса, 35",
+      "addressLocality": "Рославль",
+      "addressRegion": "Смоленская область",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 53.948,
+      "longitude": 32.863
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Продукция",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Колбаса чесночная" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Голубцы свиные" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Котлеты куриные" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Пельмени свиные домашние" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Карбонат ВК" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Тушенка свиная" } }
+      ]
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/jpeg" href="img/Logo.jpg">
+  <script src="lib/html2canvas.min.js"></script>
+  <script src="lib/jspdf.umd.min.js"></script>
+  <script src="lib/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
 
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo" title="Мясной домик">
+      <a href="#home" class="logo" title="Мясной домик">
         <img class="logo__img" src="img/Logo.jpg" alt="Мясной домик">
+        <span class="logo__text">Мясной&nbsp;домик</span>
       </a>
       <nav class="nav" id="nav">
-        <a href="index.html" class="nav__link nav__link--active">Главная</a>
-        <a href="catalog.html" class="nav__link">Каталог</a>
-        <a href="price.html" class="nav__link">Прайс</a>
-        <a href="about.html" class="nav__link">О нас</a>
-        <a href="contacts.html" class="nav__link">Контакты</a>
-        <a href="tel:+79991234567" class="nav__link nav__link--phone">+7 (999) 123-45-67</a>
+        <a href="#home" class="nav__link nav__link--active">Главная</a>
+        <a href="#catalog" class="nav__link">Каталог</a>
+        <a href="#price" class="nav__link">Прайс</a>
+        <a href="#features" class="nav__link">Преимущества</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
       </nav>
-      <button class="burger" id="burger" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__right">
+        <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+        <button type="button" class="btn btn--red btn--sm js-call-btn">Заказать звонок</button>
+        <button class="burger" id="burger" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
 
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="container hero__inner">
         <div class="hero__content">
-          <h1 class="hero__title">Своя продукция <span>по ценам производителя</span></h1>
-          <p class="hero__subtitle">Колбасы, полуфабрикаты, копчености, фарш и тушенка собственного производства. Весь ассортимент и актуальные цены — в прайсе на сайте.</p>
+          <p class="hero__label">Собственное производство в г. Рославль</p>
+          <h1 class="hero__title">Свежее мясо и полуфабрикаты <span>по ценам производителя</span></h1>
+          <p class="hero__subtitle">Колбасы, копчености, фарш, тушенка, пельмени и котлеты — делаем сами по домашним рецептам. Всегда в наличии более 50 позиций.</p>
           <div class="hero__actions">
-            <a href="catalog.html" class="btn btn--primary">Смотреть каталог</a>
-            <a href="price.html" class="btn btn--ghost">Смотреть прайс</a>
+            <a href="#catalog" class="btn btn--red">Заказать</a>
+            <button type="button" class="btn btn--dark js-call-btn">Заказать звонок</button>
           </div>
-          <ul class="hero__points">
-            <li>🌭 Более 50 позиций: колбасы, котлеты, пельмени, голубцы</li>
-            <li>💰 Мелкий опт и розница по ценам производителя</li>
-            <li>🧾 Работаем официально: ИП Лаврухин М.Ю., ИНН 672500023868</li>
-          </ul>
+          <div class="hero__phone">
+            <span>Или позвоните нам:</span>
+            <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="features">
-      <div class="container features__grid">
-        <div class="feature reveal">
-          <span class="feature__icon">🌭</span>
-          <h3>Собственное производство</h3>
-          <p>Колбасы, полуфабрикаты и копчености делаем сами по домашним рецептам.</p>
-        </div>
-        <div class="feature reveal">
-          <span class="feature__icon">💰</span>
-          <h3>Цены производителя</h3>
-          <p>Продаем без посредников — выгодно в розницу и мелким оптом.</p>
-        </div>
-        <div class="feature reveal">
-          <span class="feature__icon">📋</span>
-          <h3>Актуальный прайс</h3>
-          <p>Все цены на сайте. Прайс можно скачать и распечатать.</p>
-        </div>
-        <div class="feature reveal">
-          <span class="feature__icon">🧾</span>
-          <h3>Работаем официально</h3>
-          <p>ИП Лаврухин М.Ю., ИНН 672500023868. Документы для юр. лиц.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog" id="hits">
+    <section id="hits" class="section">
       <div class="container">
         <div class="section-head reveal">
-          <h2 class="section-title">Хиты продаж</h2>
-          <p class="section-sub">Самые популярные товары наших покупателей.</p>
+          <h2 class="section-title">Акционный товар и хиты недели</h2>
         </div>
         <div class="catalog__grid" id="featured"></div>
         <div class="section-actions reveal">
-          <a href="catalog.html" class="btn btn--ghost">Смотреть весь каталог</a>
+          <a href="#catalog" class="btn btn--dark">Смотреть весь каталог</a>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="container about__inner">
-        <div class="about__emoji reveal">🏬</div>
-        <div class="reveal">
-          <h2 class="section-title">О нас</h2>
-          <p>«Мясной домик» — собственное производство колбас, полуфабрикатов и копченостей в городе Рославль. Мы сами делаем продукцию из свежего сырья и ручаемся за качество каждой партии.</p>
-          <p>Вся продукция проходит контроль качества и изготавливается по домашним рецептам. В каталоге — колбасы, котлеты, пельмени, голубцы, фарш, копчености и тушенка.</p>
-          <a href="about.html" class="btn btn--primary">Подробнее о нас</a>
+    <section id="catalog" class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Каталог продукции</h2>
+          <p class="section-sub">Все позиции из прайс-листа, разбитые по группам. Цены за кг или за штуку.</p>
+        </div>
+        <div class="catalog__filter" id="filter">
+          <button class="chip chip--active" data-category="all">Все товары</button>
+        </div>
+        <div id="products"></div>
+      </div>
+    </section>
+
+    <section id="price" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Прайс-лист</h2>
+          <p class="section-sub">Актуальный прайс: колбасы, полуфабрикаты, тушенка, фарш, субпродукты, копчености, сало и свинина.</p>
+        </div>
+        <div class="price-section__toolbar reveal">
+          <button class="btn btn--red" id="printPrice">Печать прайса</button>
+          <button class="btn btn--dark" id="downloadPrice">Скачать прайс (PDF)</button>
+        </div>
+        <div class="price-table-wrap reveal" id="priceTableWrap"></div>
+      </div>
+    </section>
+
+    <section id="features" class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Преимущества</h2>
+          <p class="section-sub">Почему покупатели выбирают «Мясной домик».</p>
+        </div>
+        <div class="features__grid">
+          <div class="feature reveal">
+            <span class="feature__icon">🌭</span>
+            <h3>Собственное производство</h3>
+            <p>Колбасы, полуфабрикаты и копчености делаем сами по домашним рецептам.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature__icon">💰</span>
+            <h3>Цены производителя</h3>
+            <p>Продаем без посредников — выгодно в розницу и мелким оптом.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature__icon">✅</span>
+            <h3>Свежесть и качество</h3>
+            <p>Контроль качества сырья и готовой продукции на каждом этапе.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature__icon">📦</span>
+            <h3>Более 50 позиций</h3>
+            <p>Колбасы, котлеты, пельмени, голубцы, фарш, тушенка, сало и свинина.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature__icon">🧾</span>
+            <h3>Работаем официально</h3>
+            <p>ИП Лаврухин М.Ю., ИНН 672500023868. Документы для юр. лиц.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature__icon">🚚</span>
+            <h3>Доставка и самовывоз</h3>
+            <p>Заберите заказ сами или уточните условия доставки по телефону.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="order-banner">
-      <div class="container order-banner__inner">
-        <div>
-          <h2>Оформите заказ прямо сейчас</h2>
-          <p>Позвоните нам или напишите в Telegram — менеджер поможет выбрать нарезку и рассчитает стоимость доставки.</p>
+    <section id="steps" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Как мы работаем</h2>
+          <p class="section-sub">Всего несколько шагов до свежего мяса на вашем столе.</p>
         </div>
-        <div class="order-banner__actions">
-          <a href="tel:+79991234567" class="btn btn--primary btn--lg">📞 +7 (999) 123-45-67</a>
-          <a href="https://t.me/meat_dvor" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">✈ Telegram</a>
+        <div class="steps__grid">
+          <div class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Оставьте заявку</h3>
+            <p>На сайте или по телефону: +7 (999) 123-45-67.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Обсудим заказ</h3>
+            <p>Уточним позиции, вес, нарезку и способ получения.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Подготовим продукцию</h3>
+            <p>Соберем свежий заказ прямо с производства.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Посчитаем стоимость</h3>
+            <p>Назовем точную цену — без сюрпризов и скрытых наценок.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">05</span>
+            <h3>Получите заказ</h3>
+            <p>Самовывоз в Рославле или доставка по договоренности.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">06</span>
+            <h3>Радуйтесь вкусной еде</h3>
+            <p>Готовим для вас снова и снова — вы останетесь довольны.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section section--cta">
+      <div class="container">
+        <div class="order-form reveal">
+          <h2>Оставьте заявку</h2>
+          <p>Перезвоним в ближайшее время, подскажем по ассортименту и рассчитаем стоимость заказа.</p>
+          <form class="callback-form" id="callbackForm">
+            <input type="text" name="name" placeholder="Ваше имя" required autocomplete="name">
+            <input type="tel" name="phone" placeholder="Ваш телефон" required autocomplete="tel">
+            <button type="submit" class="btn btn--red">Заказать звонок</button>
+          </form>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>Согласен(а) на обработку персональных данных в соответствии с <a href="#privacy">политикой конфиденциальности</a></span>
+          </label>
+          <p class="form-success" id="formSuccess" hidden>Спасибо! Мы перезвоним вам в ближайшее время.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Отзывы довольных покупателей</h2>
+          <p class="section-sub">Что говорят о нашей продукции наши клиенты.</p>
+        </div>
+        <div class="reviews__grid">
+          <div class="review reveal">
+            <p class="review__text">Беру голубцы и котлеты уже несколько месяцев — очень вкусно и всегда свежее. Заказываю по телефону, быстро собирают заказ.</p>
+            <span class="review__name">Анна, Рославль</span>
+          </div>
+          <div class="review reveal">
+            <p class="review__text">Колбаски для жарки — просто объедение. Постоянно беру к пиву и на дачу. Цены приятно радуют, все по прайсу без обмана.</p>
+            <span class="review__name">Сергей</span>
+          </div>
+          <div class="review reveal">
+            <p class="review__text">Заказывали половинку свинины к празднику. Все сделали аккуратно, посоветовали, как лучше разрубить. Рекомендую!</p>
+            <span class="review__name">Елена</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Контакты</h2>
+          <p class="section-sub">Свяжитесь с нами удобным способом.</p>
+        </div>
+        <div class="contacts__grid">
+          <div class="contact reveal">
+            <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <h3>Адрес</h3>
+            <span>г. Рославль, ул. Карла Маркса 35</span>
+            <span>«Мясной домик»</span>
+          </div>
+          <div class="contact reveal">
+            <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4"/></svg></span>
+            <h3>Организация</h3>
+            <span>ИП Лаврухин М.Ю.</span>
+            <span>Собственное производство</span>
+          </div>
+          <div class="contact reveal">
+            <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></span>
+            <h3>ИНН</h3>
+            <span>672500023868</span>
+            <span>Работаем официально</span>
+          </div>
+          <div class="contact reveal">
+            <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <h3>Телефон</h3>
+            <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+            <span>Приём заказов ежедневно</span>
+          </div>
+          <div class="contact reveal">
+            <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <h3>E-mail</h3>
+            <a href="mailto:info@meatdvor.ru">info@meatdvor.ru</a>
+            <span>Напишите нам — ответим</span>
+          </div>
+          <div class="contact reveal">
+            <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <h3>Режим работы</h3>
+            <span>Пн–Вс: 8:00 – 20:00</span>
+            <span>Прайс на сайте обновляется</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <h2 class="section-title">Политика конфиденциальности</h2>
+          <p class="section-sub">Обработка персональных данных в соответствии с Федеральным законом № 152-ФЗ «О персональных данных».</p>
+        </div>
+        <div class="privacy__content">
+          <h3>1. Оператор</h3>
+          <p>Индивидуальный предприниматель Лаврухин М.Ю., ИНН 672500023868, г. Рославль, ул. Карла Маркса, 35 (далее — «Оператор»). Настоящая политика определяет порядок обработки персональных данных посетителей сайта «Мясной домик» (далее — «Сайт»).</p>
+          <h3>2. Какие данные мы обрабатываем</h3>
+          <p>Имя и номер телефона, которые вы указываете в формах «Заказать звонок». Иные данные (файлы cookie, IP-адрес) обрабатываются в обезличенном виде для статистики посещаемости.</p>
+          <h3>3. Цель обработки</h3>
+          <p>Обработка вашей заявки: обратный звонок, консультация по ассортименту и стоимости продукции, информирование о заказе. Согласие на обработку дается нажатием кнопки отправки формы.</p>
+          <h3>4. Правовые основания</h3>
+          <p>Согласие субъекта персональных данных (п. 1 ч. 1 ст. 6 Федерального закона № 152-ФЗ).</p>
+          <h3>5. Условия обработки</h3>
+          <p>Данные обрабатываются оператором без передачи третьим лицам, кроме случаев, предусмотренных законодательством РФ. Хранение — в течение срока, необходимого для обработки заявки, но не дольше 30 дней после её завершения.</p>
+          <h3>6. Ваши права</h3>
+          <p>Вы вправе отозвать согласие, а также запросить уточнение, блокирование или уничтожение своих данных, направив обращение на email <a href="mailto:info@meatdvor.ru">info@meatdvor.ru</a>.</p>
+          <h3>7. Защита данных</h3>
+          <p>Сайт работает по защищённому протоколу HTTPS (SSL-сертификат). Принимаются необходимые организационные и технические меры для защиты персональных данных от неправомерного доступа, изменения, раскрытия или уничтожения.</p>
         </div>
       </div>
     </section>
@@ -128,15 +364,41 @@
         <a href="mailto:info@meatdvor.ru">info@meatdvor.ru</a>
         <span>г. Рославль, ул. Карла Маркса 35</span>
       </div>
+      <div class="footer__social">
+        <a href="https://t.me/meat_dvor" target="_blank" rel="noopener">Telegram</a>
+        <span>с 8:00 до 20:00 ежедневно</span>
+      </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
         © 2026 «Мясной домик». ИП Лаврухин М.Ю., ИНН 672500023868. Цены на сайте не являются публичной офертой.
+        <a href="#privacy" class="footer__policy-link">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
 
+  <div class="modal" id="callbackModal" aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+      <h3 id="modalTitle">Заказать звонок</h3>
+      <p>Оставьте свои контакты, и наш менеджер вам перезвонит.</p>
+      <form class="callback-form callback-form--modal" id="modalCallbackForm">
+        <input type="text" name="name" placeholder="Ваше имя" required autocomplete="name">
+        <input type="tel" name="phone" placeholder="Ваш телефон" required autocomplete="tel">
+        <button type="submit" class="btn btn--red">Заказать звонок</button>
+      </form>
+      <label class="consent">
+        <input type="checkbox" name="consent" required>
+        <span>Согласен(а) на обработку персональных данных в соответствии с <a href="#privacy">политикой конфиденциальности</a></span>
+      </label>
+      <p class="form-success" id="modalFormSuccess" hidden>Спасибо! Мы перезвоним вам в ближайшее время.</p>
+    </div>
+  </div>
+
   <script src="js/products.js"></script>
+  <script src="js/promo.js"></script>
+  <script src="lib/fonts.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
