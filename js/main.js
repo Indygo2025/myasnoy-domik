@@ -377,4 +377,24 @@ document.addEventListener('click', (e) => {
   }
 });
 
+function initMapTabs(root) {
+  root.querySelectorAll('.map-tabs').forEach((tabs) => {
+    const inputs = tabs.querySelectorAll('.map-tabs__input');
+    const panels = tabs.querySelectorAll('.map-tabs__panel');
+    const labels = tabs.querySelectorAll('.map-tabs__label');
+    function select(value) {
+      panels.forEach((p) => p.classList.toggle('active', p.dataset.map === value));
+      labels.forEach((l) => l.classList.toggle('active', l.dataset.map === value));
+      inputs.forEach((i) => {
+        i.checked = i.value === value;
+      });
+    }
+    inputs.forEach((i) => i.addEventListener('change', () => select(i.value)));
+    const checked = tabs.querySelector('.map-tabs__input:checked');
+    select(checked ? checked.value : 'yandex');
+  });
+}
+
+initMapTabs(document);
+
 showPage('home');
