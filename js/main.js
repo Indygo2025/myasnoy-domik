@@ -12,7 +12,7 @@ function productCard(p, idx, opts = {}) {
     ? `<span class="card__badge">${badgeText}</span>`
     : '';
   const order = opts.order
-    ? `<a class="card__order" href="${ORDER_PHONE}">Заказать</a>`
+    ? `<a class="card__order" href="${opts.orderHref || ORDER_PHONE}">Заказать</a>`
     : '';
   return `
     <article class="card">
@@ -125,7 +125,7 @@ if (featuredGrid) {
     if (sec) sec.style.display = 'none';
   } else {
     featuredGrid.innerHTML = promoItems
-      .map((item, i) => productCard(item.p, i, { badge: item.badge }))
+      .map((item, i) => productCard(item.p, i, { badge: item.badge, order: true }))
       .join('');
   }
 }
